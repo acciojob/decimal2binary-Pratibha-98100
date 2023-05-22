@@ -21,4 +21,4 @@ function decimalToBinary(decimal) {
 
 console.log(`Binary representation: ${binaryNumber}`);
 
-module.exports = threeSum;
+//module.exports = threeSum;
