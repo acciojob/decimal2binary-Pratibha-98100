@@ -1,24 +1,24 @@
-function decimalToBinary(decimal) {
-  // Check if the input is valid
-  if (decimal === 0) {
-    return '0';
-  } else if (decimal < 0 || !Number.isInteger(decimal)) {
-    return 'Invalid input. Please enter a positive integer.';
-  }
+function decimalToBinary(num){
+    let binaryStr = ""
 
-  let binary = '';
-  while (decimal > 0) {
-    // Get the remainder when dividing by 2
-    const remainder = decimal % 2;
-    // Append the remainder to the binary string
-    binary = remainder + binary;
-    // Update the decimal by dividing it by 2
-    decimal = Math.floor(decimal / 2);
-  }
+    while(num>0){
 
-  return binary;
+        let rem = num%2;
+
+        // Method 1 - Appending the new binary character to the front of the string
+        // binaryStr = rem.toString() + binaryStr
+
+        // Method 2 - Append it to the end
+        binaryStr = binaryStr + rem.toString()
+
+        num = Math.floor(num/2)
+    }
+    // Method - 1
+    // return binaryStr
+
+
+    // Method 2- Reverse it
+    return binaryStr.split("").reverse().join("")
 }
 
-console.log(`Binary representation: ${binaryNumber}`);
-
-//module.exports = threeSum;
+module.exports = decimalToBinary
