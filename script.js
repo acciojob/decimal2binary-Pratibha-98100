@@ -1,4 +1,4 @@
-function decimalToBinary(num){
+function decimalToBinary(decimalNumber){
   // Base case: if the decimal number is 0, its binary representation is also 0
   if (decimalNumber === 0) {
     return '0';
